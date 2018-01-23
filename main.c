@@ -105,7 +105,7 @@ int main()
             {
                 end_matrix[i][j] = 0;
                 for (k = 0; k < new_line; k++)
-                    end_matrix[i][j] += delete_matrix[i][k] * new_matrix[k][j];
+                    end_matrix[i][j] += matrix[i][k] * new_matrix[k][j];
             }
         }
         for (i = 0; i < line; i++)      /* output */
