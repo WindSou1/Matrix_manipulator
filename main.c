@@ -81,7 +81,7 @@ int main()
     printf("Enter lines and columns of new matrix: ");      /* manual matrix */
     scanf ("%d %d", &new_line, &new_pil);
     int new_matrix[new_line][new_pil];
-    int end_matrix[line-1][new_pil];
+    int end_matrix[line][new_pil];
     for (i = 0; i < new_line; i++)
     {
         for (j = 0; j < new_pil; j++)
@@ -95,11 +95,11 @@ int main()
         printf("\n");
     }
     printf("\n\n");
-    if (pillar - 1 != new_line)     /* multiplication */
+    if (pillar != new_line)     /* multiplication */
         printf ("we can't multiply this matrixes");
     else
     {
-        for (i = 0; i < line - 1; i++)
+        for (i = 0; i < line; i++)
         {
             for (j = 0; j < new_pil; j++)
             {
@@ -108,7 +108,7 @@ int main()
                     end_matrix[i][j] += delete_matrix[i][k] * new_matrix[k][j];
             }
         }
-        for (i = 0; i < line - 1; i++)      /* output */
+        for (i = 0; i < line; i++)      /* output */
         {
             for (j = 0; j < new_pil; j++)
                 printf ("%d\t", end_matrix[i][j]);
